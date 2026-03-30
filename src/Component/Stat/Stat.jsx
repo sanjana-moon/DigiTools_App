@@ -3,7 +3,7 @@ import React from 'react';
 const Stat = () => {
     return (
         <div className='bg-linear-to-r from-[#4F39F6] to-[#9514FA]'>
-            <div className='container mx-auto px-4'>
+            <div className='container mx-auto px-4 py-4'>
                 <div className="stats stats-vertical lg:stats-horizontal shadow flex flex-col md:flex-row">
                     <div className="stat text-center">
                         <div className="text-5xl font-bold text-white">50K+</div>

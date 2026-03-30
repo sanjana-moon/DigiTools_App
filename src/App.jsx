@@ -3,8 +3,9 @@ import Banner from './Component/Banner/Banner'
 import CardContainer from './Component/CardContainer/CardContainer'
 import About from './Component/Footer/About'
 import Footer from './Component/Footer/Footer'
-import Instruction from './Component/Instruction/Instruction'
+import Instruction from './Component/InstructionCard/InstructionCards'
 import Navbar from './Component/Navbar/Navbar'
+import PricingCard from './Component/PricingCard/PricingCard'
 import Stat from './Component/Stat/Stat'
 
 const fetchCards = async () => {
@@ -22,6 +23,7 @@ function App() {
       <Stat />
       <CardContainer cardsPromise={cardsPromise}/>
       <Instruction/>
+      <PricingCard/>
       <Footer/>
     </>
   )
