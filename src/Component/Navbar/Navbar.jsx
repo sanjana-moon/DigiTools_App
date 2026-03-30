@@ -4,7 +4,7 @@ import { LuShoppingCart } from 'react-icons/lu';
 const Navbar = () => {
     return (
         <div className='container mx-auto px-4'>
-            <div className="navbar bg-base-100 shadow-sm py-4">
+            <div className="navbar bg-base-100 flex shadow-sm py-4 gap-4 flex-col md:flex-row">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -33,9 +33,9 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end flex items-center gap-4">
                     <div>
-                        <span class="relative flex size-3 left-2.5 top-1 hidden">
-                            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
-                            <span class="relative inline-flex size-3 rounded-full bg-sky-500"></span>
+                        <span className="relative flex size-3 left-2.5 top-1 hidden">
+                            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
+                            <span className="relative inline-flex size-3 rounded-full bg-sky-500"></span>
                         </span>
                         <LuShoppingCart />
                     </div>
@@ -43,7 +43,6 @@ const Navbar = () => {
                     <a className="btn btn-primary rounded-full">Get Started</a>
                 </div>
             </div>
-            
         </div>
     );
 };
