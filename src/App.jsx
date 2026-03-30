@@ -1,6 +1,7 @@
 import './App.css'
 import Banner from './Component/Banner/Banner'
 import CardContainer from './Component/CardContainer/CardContainer'
+import About from './Component/Footer/About'
 import Footer from './Component/Footer/Footer'
 import Instruction from './Component/Instruction/Instruction'
 import Navbar from './Component/Navbar/Navbar'

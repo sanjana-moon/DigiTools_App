@@ -14,7 +14,7 @@ const Stat = () => {
                         <div className="text-5xl font-bold text-white">200+</div>
                         <div className="text-lg text-white">Premium Tools</div>
                     </div>
-                    <div class="divider lg:divider-horizontal bg-white my-3 rounded-4xl"></div>
+                    <div className="divider lg:divider-horizontal bg-white my-3 rounded-4xl"></div>
                     <div className="stat text-center">
                         <div className="text-5xl font-bold text-white">4.9</div>
                         <div className="text-lg text-white">Rating</div>

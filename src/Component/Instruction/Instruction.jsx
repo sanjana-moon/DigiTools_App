@@ -13,7 +13,7 @@ const Instruction = () => {
                 </div>
                 <div className='flex gap-6 items-center justify-center flex-col md:flex-row'>
                     <div className="card bg-base-100 px-6 py-20 shadow-sm">
-                        <div class="size-9 rounded-full bg-radial-[at_50%_75%] from-[#4F39F6] to-[#4F39F6] to-90% text-white relative left-100 bottom-12 flex items-center justify-center">01</div>
+                        <div className="size-9 rounded-full bg-radial-[at_50%_75%] from-[#4F39F6] to-[#4F39F6] to-90% text-white relative left-100 bottom-12 flex items-center justify-center">01</div>
                         <figure className="px-10 pt-10">
                             <img src={user} />
                         </figure>
@@ -23,7 +23,7 @@ const Instruction = () => {
                         </div>
                     </div>
                     <div className="card bg-base-100 px-6 py-20 shadow-sm">
-                        <div class="size-9 rounded-full bg-radial-[at_50%_75%] from-[#4F39F6] to-[#4F39F6] to-90% text-white relative left-90 bottom-12 flex items-center justify-center">02</div>
+                        <div className="size-9 rounded-full bg-radial-[at_50%_75%] from-[#4F39F6] to-[#4F39F6] to-90% text-white relative left-90 bottom-12 flex items-center justify-center">02</div>
                         <figure className="px-10 pt-10">
                             <img src={Package} />
                         </figure>
@@ -33,7 +33,7 @@ const Instruction = () => {
                         </div>
                     </div>
                     <div className="card bg-base-100 px-6 py-20 shadow-sm">
-                        <div class="size-9 rounded-full bg-radial-[at_50%_75%] from-[#4F39F6] to-[#4F39F6] to-90% text-white relative left-90 bottom-12 flex items-center justify-center">03</div>
+                        <div className="size-9 rounded-full bg-radial-[at_50%_75%] from-[#4F39F6] to-[#4F39F6] to-90% text-white relative left-90 bottom-12 flex items-center justify-center">03</div>
                         <figure className="px-10 pt-10">
                             <img src={rocket} />
                         </figure>
