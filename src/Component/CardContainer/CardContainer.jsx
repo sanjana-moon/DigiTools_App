@@ -1,5 +1,6 @@
 import React, { use, useState } from 'react';
 import Products from './Product/Products';
+import Carts from './Carts/Carts';
 
 const CardContainer = ({ cardsPromise }) => {
     const cards = use(cardsPromise)
@@ -15,17 +16,25 @@ const CardContainer = ({ cardsPromise }) => {
                     <button
                         onClick={() => setSelectedCards("product")}
                         className={`btn ${selectedCards === 'product' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>
-                            Products</button>
+                        Products</button>
                     <button
                         onClick={() => setSelectedCards("cart")}
-                        className ={`btn ${selectedCards === 'cart' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>
-                            Cart (2)</button>
+                        className={`btn ${selectedCards === 'cart' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>
+                        Cart (2)</button>
                 </div>
-                <Products 
-                cards={cards}
-                selectedCards={selectedCards}
-                setSelectedCards={selectedCards}/>
+
             </div>
+            {
+                (selectedCards === "product" ?
+                    <Products
+                        cards={cards}
+                        selectedCards={selectedCards}
+                        setSelectedCards={selectedCards} /> :
+                    <Carts 
+                    cards={cards}
+                    selectedCards={selectedCards}
+                    setSelectedCards={setSelectedCards}/>)
+            }
         </div>
     );
 };

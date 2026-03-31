@@ -9,8 +9,8 @@ const Product = ({ card }) => {
     }
     return (
         <div>
-            <div className="card w-96 shadow-sm ">
-                <div className="card-body bg-base-200 rounded-3xl text-left space-y-3">
+            <div className="card shadow-sm p-5">
+                <div className="card-body bg-base-200 rounded-3xl text-left space-y-3 h-125">
                     <div className='text-right'>
                         <span className={`badge ${tagStyle[card.tagType]} badge-soft w-[35%]  mb-3`}>{card.tag}</span>
                     </div>

@@ -3,7 +3,7 @@ import Product from './Product';
 
 const Products = ({ cards, selectedCards, setSelectedCards }) => {
     return (
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
+        <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-3'>
             {
                 cards.map(card => {
                     return (
