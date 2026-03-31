@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import CartCard from './CartCard';
 import EmptyCard from './EmptyCard';
 
@@ -8,6 +9,7 @@ const Carts = ({ selectedCards, setSelectedCards, cardPrice, setCardPrice }) => 
         )
         setSelectedCards(filteredCard)
         setCardPrice(cardPrice - card.price)
+        toast.warning(`${card.name} removed from cart`)
     }
     const handleProceedBtn = () => {
         setSelectedCards([])

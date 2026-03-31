@@ -3,8 +3,8 @@ import { LuShoppingCart } from 'react-icons/lu';
 
 const Navbar = ({selectedCards, setSelectedCards}) => {
     return (
-        <div className='container mx-auto px-4'>
-            <div className="navbar bg-base-100 flex shadow-sm py-4 gap-4 flex-col md:flex-row">
+        <div className='sticky z-10 top-0'>
+            <div className="navbar mx-auto bg-base-100 flex shadow-sm py-4 gap-4 flex-col md:flex-row">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -31,10 +31,10 @@ const Navbar = ({selectedCards, setSelectedCards}) => {
                         <li><a>FAQ</a></li>
                     </ul>
                 </div>
-                <div className="navbar-end flex items-center gap-4">
+                <div className="navbar-end flex items-center gap-4 justify-between md:justify-end">
                     <div>
                         <span className="relative flex size-8 left-2.5 top-1">
-                            <span className={`absolute inline-flex h-full w-full rounded-full bg-red-300 opacity-75 ${selectedCards.length >0 && "animate-ping"}`}></span>
+                            <span className={`absolute inline-flex h-full w-full rounded-full bg-red-300 opacity-75 ${selectedCards.length >0 ? "animate-ping" : "hidden"}`}></span>
                             <span className="relative inline-flex size-8 rounded-full bg-red-400 items-center justify-center">{selectedCards.length}</span>
                         </span>
                         <LuShoppingCart />
