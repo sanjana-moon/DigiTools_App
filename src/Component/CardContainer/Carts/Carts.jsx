@@ -1,14 +1,19 @@
-import React from 'react';
-import Cart from './Cart';
+import React, { useState } from 'react';
+import CartCard from './CartCard';
 
-const Carts = ({cards, selectedCards, setSelectedCards}) => {
+const Carts = ({ selectedCards, setSelectedCards }) => {
+
     return (
         <div className='container mx-auto p-4 space-y-6'>
             <h2 className='text-xl font-bold'>Your Cart</h2>
             {
-                cards.map(card => {
-                    return(
-                        <Cart key={card.id} card={card}/>
+                selectedCards.map(card => {
+                    return (
+                        <CartCard
+                            key={card.id}
+                            card={card}
+                            selectedCards={selectedCards}
+                            setSelectedCards={setSelectedCards} />
                     )
                 })
             }

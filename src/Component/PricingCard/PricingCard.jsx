@@ -8,7 +8,7 @@ const PricingCard = () => {
                 <h1 className='text-5xl font-bold pb-4'>Simple, Transparent Pricing</h1>
                 <p className='text-[#627382]'>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </div>
-            <div className='container mx-auto flex gap-8 justify-center'>
+            <div className='container mx-auto flex gap-8 justify-center flex-col md:flex-row'>
                 <div className="card w-96 shadow-sm">
                     <div className="card-body bg-base-200 rounded-3xl">
                         <h2 className="text-2xl font-bold">Starter</h2>

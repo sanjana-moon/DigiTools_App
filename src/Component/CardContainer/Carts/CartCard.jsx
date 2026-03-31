@@ -1,7 +1,6 @@
 import React from 'react';
 
-const Cart = ({card}) => {
-    console.log(card)
+const CartCard = ({ card }) => {
     return (
         <div className='flex justify-between py-5'>
             <div className='flex items-center gap-5'>
@@ -16,4 +15,4 @@ const Cart = ({card}) => {
     );
 };
 
-export default Cart;
+export default CartCard;

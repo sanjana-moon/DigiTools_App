@@ -1,5 +1,5 @@
 import React from 'react';
-import Product from './Product';
+import ProductCard from './ProductCard';
 
 const Products = ({ cards, selectedCards, setSelectedCards }) => {
     return (
@@ -7,7 +7,11 @@ const Products = ({ cards, selectedCards, setSelectedCards }) => {
             {
                 cards.map(card => {
                     return (
-                        <Product key={card.id} card={card} />
+                        <ProductCard 
+                        key={card.id} 
+                        card={card} 
+                        selectedCards={selectedCards}
+                        setSelectedCards={setSelectedCards} />
                     )
                 })
             }

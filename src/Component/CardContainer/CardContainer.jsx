@@ -2,9 +2,10 @@ import React, { use, useState } from 'react';
 import Products from './Product/Products';
 import Carts from './Carts/Carts';
 
-const CardContainer = ({ cardsPromise }) => {
+const CardContainer = ({ cardsPromise, selectedCards, setSelectedCards }) => {
     const cards = use(cardsPromise)
-    const [selectedCards, setSelectedCards] = useState("product")
+    const [selectedType, setSelectedType] = useState("product")
+    
 
     return (
         <div className='py-30'>
@@ -14,26 +15,26 @@ const CardContainer = ({ cardsPromise }) => {
                     Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
                 <div className='flex justify-center'>
                     <button
-                        onClick={() => setSelectedCards("product")}
+                        onClick={() => setSelectedType("product")}
                         className={`btn ${selectedCards === 'product' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>
                         Products</button>
                     <button
-                        onClick={() => setSelectedCards("cart")}
-                        className={`btn ${selectedCards === 'cart' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>
-                        Cart (2)</button>
+                        onClick={() => setSelectedType("cart")}
+                        className={`btn ${selectedType === 'cart' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>
+                        Cart ({selectedCards.length})</button>
                 </div>
 
             </div>
             {
-                (selectedCards === "product" ?
+                (selectedType === "product" ?
                     <Products
                         cards={cards}
                         selectedCards={selectedCards}
-                        setSelectedCards={selectedCards} /> :
-                    <Carts 
-                    cards={cards}
-                    selectedCards={selectedCards}
-                    setSelectedCards={setSelectedCards}/>)
+                        setSelectedCards={setSelectedCards} /> :
+                    <Carts
+                        cards={cards}
+                        selectedCards={selectedCards}
+                        setSelectedCards={setSelectedCards} />)
             }
         </div>
     );

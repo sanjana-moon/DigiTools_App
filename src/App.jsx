@@ -1,12 +1,13 @@
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './Component/Banner/Banner'
 import CardContainer from './Component/CardContainer/CardContainer'
-import About from './Component/Footer/About'
 import Footer from './Component/Footer/Footer'
 import Instruction from './Component/InstructionCard/InstructionCards'
 import Navbar from './Component/Navbar/Navbar'
 import PricingCard from './Component/PricingCard/PricingCard'
 import Stat from './Component/Stat/Stat'
+import { ToastContainer } from 'react-toastify'
 
 const fetchCards = async () => {
   const res = await fetch('/data.json')
@@ -15,16 +16,29 @@ const fetchCards = async () => {
 const cardsPromise = fetchCards()
 
 function App() {
+  const [selectedCards, setSelectedCards] = useState([])
 
   return (
     <>
-      <Navbar />
+      <Navbar
+        selectedCards={selectedCards}
+        setSelectedCards={setSelectedCards} />
       <Banner />
       <Stat />
-      <CardContainer cardsPromise={cardsPromise}/>
-      <Instruction/>
-      <PricingCard/>
-      <Footer/>
+      <Suspense fallback={
+        <div className=' p-50 flex items-center justify-center'>
+          <span className="loading loading-dots loading-xl">
+          </span>
+        </div>}>
+        <CardContainer 
+        cardsPromise={cardsPromise}
+        selectedCards={selectedCards}
+        setSelectedCards={setSelectedCards} />
+      </Suspense>
+      <Instruction />
+      <PricingCard />
+      <Footer />
+      <ToastContainer/>
     </>
   )
 }
