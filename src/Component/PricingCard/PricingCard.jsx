@@ -16,16 +16,16 @@ const PricingCard = () => {
                         <span className="text-xl text-[#627382]"><span className='font-bold text-4xl text-black'>$0</span>/mo</span>
                         <ul className="mt-6 flex flex-col gap-2 text-xs text-[#627382]">
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> Access to 10 free tools</span>
+                                <span className='flex gap-1'><GiCheckMark className='text-[#30B868]' /> Access to 10 free tools</span>
                             </li>
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> Basic templates</span>
+                                <span className='flex gap-1'><GiCheckMark className='text-[#30B868]' /> Basic templates</span>
                             </li>
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> Community support</span>
+                                <span className='flex gap-1'><GiCheckMark className='text-[#30B868]' /> Community support</span>
                             </li>
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> 1 project per month</span>
+                                <span className='flex gap-1'><GiCheckMark className='text-[#30B868]' /> 1 project per month</span>
                             </li>
                         </ul>
                         <div className="mt-6">
@@ -41,10 +41,10 @@ const PricingCard = () => {
                         <span className="text-xl"><span className='font-bold text-4xl'>$29</span>/mo</span>
                         <ul className="mt-6 flex flex-col gap-2 text-xs">
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> Access to all premium tools</span>
+                                <span className='flex gap-1'><GiCheckMark/> Access to all premium tools</span>
                             </li>
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> Unlimited templates</span>
+                                <span className='flex gap-1'><GiCheckMark/> Unlimited templates</span>
                             </li>
                             <li>
                                 <span className='flex gap-1'><GiCheckMark /> Priority support</span>
@@ -56,7 +56,7 @@ const PricingCard = () => {
                                 <span className='flex gap-1'><GiCheckMark /> Cloud sync</span>
                             </li>
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> Advanced analytics</span>
+                                <span className='flex gap-1'><GiCheckMark/> Advanced analytics</span>
                             </li>
                         </ul>
                         <div className="mt-6">
@@ -71,22 +71,22 @@ const PricingCard = () => {
                         <span className="text-xl text-[#627382]"><span className='font-bold text-4xl text-black'>$99</span>/mo</span>
                         <ul className="mt-6 flex flex-col gap-2 text-xs text-[#627382]">
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> Everything in Pro</span>
+                                <span className='flex gap-1'><GiCheckMark className='text-[#30B868]' /> Everything in Pro</span>
                             </li>
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> Team collaboration</span>
+                                <span className='flex gap-1'><GiCheckMark className='text-[#30B868]' /> Team collaboration</span>
                             </li>
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> Custom integrations</span>
+                                <span className='flex gap-1'><GiCheckMark className='text-[#30B868]' /> Custom integrations</span>
                             </li>
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> Dedicated support</span>
+                                <span className='flex gap-1'><GiCheckMark className='text-[#30B868]' /> Dedicated support</span>
                             </li>
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> SLA guarantee</span>
+                                <span className='flex gap-1'><GiCheckMark className='text-[#30B868]' /> SLA guarantee</span>
                             </li>
                             <li>
-                                <span className='flex gap-1'><GiCheckMark /> Custom branding</span>
+                                <span className='flex gap-1'><GiCheckMark className='text-[#30B868]' /> Custom branding</span>
                             </li>
                         </ul>
                         <div className="mt-6">

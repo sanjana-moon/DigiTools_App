@@ -1,10 +1,10 @@
 import React, { use, useState } from 'react';
+import Products from './Product/Products';
 
 const CardContainer = ({ cardsPromise }) => {
     const cards = use(cardsPromise)
-    const [selectedType, setSelectedType] = useState("product")
+    const [selectedCards, setSelectedCards] = useState("product")
 
-    console.log(cards)
     return (
         <div className='py-30'>
             <div className='container mx-auto p-4 text-center space-y-4'>
@@ -13,12 +13,18 @@ const CardContainer = ({ cardsPromise }) => {
                     Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
                 <div className='flex justify-center'>
                     <button
-                        onClick={() => setSelectedType("product")}
-                        className={`btn ${selectedType === 'product' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>Products</button>
+                        onClick={() => setSelectedCards("product")}
+                        className={`btn ${selectedCards === 'product' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>
+                            Products</button>
                     <button
-                        onClick={() => setSelectedType("cart")}
-                        className ={`btn ${selectedType === 'cart' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>Cart (2)</button>
+                        onClick={() => setSelectedCards("cart")}
+                        className ={`btn ${selectedCards === 'cart' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>
+                            Cart (2)</button>
                 </div>
+                <Products 
+                cards={cards}
+                selectedCards={selectedCards}
+                setSelectedCards={selectedCards}/>
             </div>
         </div>
     );
