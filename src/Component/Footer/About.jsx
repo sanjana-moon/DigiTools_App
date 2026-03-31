@@ -5,36 +5,36 @@ import { RiInstagramFill } from 'react-icons/ri';
 const About = () => {
     return (
         <div className='bg-neutral'>
-            <div className='container mx-auto pt-20'>
-                <footer className="footer flex sm:footer-horizontal bg-neutral text-neutral-content p-10 justify-around items-start pb-16">
+            <div className='container mx-auto pt-15'>
+                <footer className="flex bg-neutral text-neutral-content p-10 justify-around  pb-8 flex-col md:flex-row">
                     <nav>
                         <h2 className="text-5xl font-bold bg-linear-65 from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent py-4">DigiTools</h2>
                         <p>Premium digital tools for creators, <br /> professionals, and businesses. Work smarter <br /> with our suite of powerful tools.</p>
                     </nav>
-                    <nav>
+                    <nav className='flex flex-col gap-2'>
                         <h6 className="font-bold text-lg">Product</h6>
                         <a className="link link-hover">Features</a>
                         <a className="link link-hover">Pricing</a>
                         <a className="link link-hover">Templates</a>
                         <a className="link link-hover">Integrations</a>
                     </nav>
-                    <nav>
+                    <nav className='flex flex-col gap-2'>
                         <h6 className="font-bold text-lg">Company</h6>
                         <a className="link link-hover">About</a>
                         <a className="link link-hover">Blog</a>
                         <a className="link link-hover">Careers</a>
                         <a className="link link-hover">Press</a>
                     </nav>
-                    <nav>
+                    <nav className='flex flex-col gap-2'>
                         <h6 className="font-bold text-lg">Resources</h6>
                         <a className="link link-hover">Documentation</a>
                         <a className="link link-hover">Help Center</a>
                         <a className="link link-hover">Community</a>
                         <a className="link link-hover">Contact</a>
                     </nav>
-                    <nav>
-                        <h6 className="font-bold text-lg">Social Links</h6>
-                        <div className="grid grid-flow-col gap-4">
+                    <nav className='flex flex-col gap-2'>
+                        <h6 className="font-bold text-lg mb-2">Social Links</h6>
+                        <div className="grid grid-flow-col gap-3">
                             <a className='border rounded-full p-4 bg-white text-black'>
                                 <RiInstagramFill />
                             </a>
@@ -50,7 +50,7 @@ const About = () => {
 
                 <div className="divider "></div>
 
-                <footer className="footer justify-around sm:footer-horizontal bg-neutral text-neutral-content items-center p-4 pb-8 border-t">
+                <footer className="footer justify-around sm:footer-horizontal bg-neutral text-neutral-content items-center p-4 pb-8 border-t grid-cols-1 md:grid-cols-2">
                     <aside className="grid-flow-col items-center">
                         <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
                     </aside>
