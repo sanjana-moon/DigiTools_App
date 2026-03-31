@@ -5,6 +5,8 @@ import Carts from './Carts/Carts';
 const CardContainer = ({ cardsPromise, selectedCards, setSelectedCards }) => {
     const cards = use(cardsPromise)
     const [selectedType, setSelectedType] = useState("product")
+        
+  const [cardPrice, setCardPrice] = useState(0)
     
 
     return (
@@ -16,7 +18,7 @@ const CardContainer = ({ cardsPromise, selectedCards, setSelectedCards }) => {
                 <div className='flex justify-center'>
                     <button
                         onClick={() => setSelectedType("product")}
-                        className={`btn ${selectedCards === 'product' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>
+                        className={`btn ${selectedType === 'product' ? "bg-linear-100 from-[#4F39F6] to-[#9514FA] text-white" : ""} rounded-full`}>
                         Products</button>
                     <button
                         onClick={() => setSelectedType("cart")}
@@ -30,11 +32,15 @@ const CardContainer = ({ cardsPromise, selectedCards, setSelectedCards }) => {
                     <Products
                         cards={cards}
                         selectedCards={selectedCards}
-                        setSelectedCards={setSelectedCards} /> :
+                        setSelectedCards={setSelectedCards}
+                        cardPrice={cardPrice}
+                        setCardPrice={setCardPrice} /> :
                     <Carts
                         cards={cards}
                         selectedCards={selectedCards}
-                        setSelectedCards={setSelectedCards} />)
+                        setSelectedCards={setSelectedCards}
+                        cardPrice={cardPrice}
+                        setCardPrice={setCardPrice} />)
             }
         </div>
     );

@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 
-const Products = ({ cards, selectedCards, setSelectedCards }) => {
+const Products = ({ cards, selectedCards, setSelectedCards, cardPrice, setCardPrice }) => {
     return (
         <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 gap-3'>
             {
@@ -11,7 +11,9 @@ const Products = ({ cards, selectedCards, setSelectedCards }) => {
                         key={card.id} 
                         card={card} 
                         selectedCards={selectedCards}
-                        setSelectedCards={setSelectedCards} />
+                        setSelectedCards={setSelectedCards}
+                        cardPrice={cardPrice}
+                        setCardPrice={setCardPrice} />
                     )
                 })
             }

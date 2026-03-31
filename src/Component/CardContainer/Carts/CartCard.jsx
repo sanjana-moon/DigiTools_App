@@ -1,6 +1,7 @@
 import React from 'react';
 
-const CartCard = ({ card }) => {
+const CartCard = ({ card, handleRemoveBtn }) => {
+    
     return (
         <div className='flex justify-between py-5'>
             <div className='flex items-center gap-5'>
@@ -10,7 +11,9 @@ const CartCard = ({ card }) => {
                     <p className='text-[#627382]'>${card.price}</p>
                 </div>
             </div>
-            <button className='btn text-red-500'>Remove</button>
+            <button
+                onClick={()=> handleRemoveBtn(card)}
+                className='btn text-red-500'>Remove</button>
         </div>
     );
 };

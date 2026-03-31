@@ -1,7 +1,13 @@
-import React, { useState } from 'react';
 import CartCard from './CartCard';
 
-const Carts = ({ selectedCards, setSelectedCards }) => {
+const Carts = ({ selectedCards, setSelectedCards, cardPrice, setCardPrice }) => {
+    const handleRemoveBtn = (card) => {
+        const filteredCard = selectedCards.filter(
+            (newCards) => newCards.name !== card.name
+        )
+            setSelectedCards(filteredCard)
+            setCardPrice(cardPrice - card.price)
+    }
 
     return (
         <div className='container mx-auto p-4 space-y-6'>
@@ -13,13 +19,16 @@ const Carts = ({ selectedCards, setSelectedCards }) => {
                             key={card.id}
                             card={card}
                             selectedCards={selectedCards}
-                            setSelectedCards={setSelectedCards} />
+                            setSelectedCards={setSelectedCards}
+                            cardPrice={cardPrice}
+                            setCardPrice={setCardPrice}
+                            handleRemoveBtn={handleRemoveBtn} />
                     )
                 })
             }
             <div className='flex justify-between items-center'>
                 <p className='text-[#627382]'>Total:</p>
-                <p className='text-2xl font-bold'>$58</p>
+                <p className='text-2xl font-bold'>${cardPrice}</p>
             </div>
             <button className='btn btn-primary bg-linear-100 from-[#4F39F6] to-[#9514FA] rounded-full w-full'>Proceed to Checkout</button>
         </div>
