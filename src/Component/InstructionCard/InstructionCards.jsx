@@ -11,8 +11,8 @@ const Instruction = () => {
                     <h2 className='text-5xl font-bold mb-4'>Get Started in 3 Steps</h2>
                     <p className='text-[#627382]'>Start using premium digital tools in minutes, not hours.</p>
                 </div>
-                <div className='flex gap-6 items-center justify-center flex-col md:flex-row'>
-                    <div className="card bg-base-100 px-6 py-20 shadow-sm">
+                <div className='flex gap-6 items-center justify-center flex-col lg:flex-row'>
+                    <div className="card bg-base-100 px-6 py-20 shadow-sm ">
                         <div className="size-9 rounded-full bg-radial-[at_50%_75%] from-[#4F39F6] to-[#4F39F6] to-90% text-white absolute left-90 top-10 flex items-center justify-center">01</div>
                         <figure className="px-10 pt-10">
                             <img src={user} />

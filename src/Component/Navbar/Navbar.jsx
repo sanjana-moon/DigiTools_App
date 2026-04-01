@@ -1,10 +1,10 @@
 import React from 'react';
 import { LuShoppingCart } from 'react-icons/lu';
 
-const Navbar = ({selectedCards, setSelectedCards}) => {
+const Navbar = ({selectedCards}) => {
     return (
-        <div className='sticky z-10 top-0'>
-            <div className="navbar mx-auto bg-base-100 flex shadow-sm py-4 gap-4 flex-col md:flex-row">
+        <div className='sticky z-10 top-0 bg-base-100 m-0 p-0'>
+            <div className="navbar container mx-auto bg-base-100 flex shadow-sm py-4 gap-4 flex-col md:flex-row">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

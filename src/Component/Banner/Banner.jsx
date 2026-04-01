@@ -5,8 +5,8 @@ import { LuPlay } from 'react-icons/lu';
 
 const Banner = () => {
     return (
-            <div className="hero min-h-screen">
-                <div className="hero-content flex-col w-full justify-around lg:flex-row-reverse gap-15">
+            <div className="hero max-h-screen py-10 md:py-20 md:px-1 lg:p-40">
+                <div className="hero-content w-full flex-col justify-around lg:flex-row-reverse gap-15">
                     <img
                         src={banner}
                         className="max-w-sm rounded-lg shadow-2xl"

@@ -1,17 +1,16 @@
-import React, { useState } from 'react';
 import { GiCheckMark } from 'react-icons/gi';
 import { toast } from 'react-toastify';
 
 const ProductCard = ({ card, selectedCards, setSelectedCards, cardPrice, setCardPrice }) => {
-    const [isSelected, setIsSelected] = useState(false)
+    const isSelected = selectedCards.find(selectedCard => selectedCard.id === card.id);
 
     const handleCards = () => {
-        setIsSelected(true)
+        if(isSelected)
+            return;
         toast(`${card.name} added to cart`)
         setSelectedCards([...selectedCards, card])
         setCardPrice(cardPrice + card.price)
     }
-
 
     const tagStyle = {
         "new": "badge-info",
@@ -43,7 +42,10 @@ const ProductCard = ({ card, selectedCards, setSelectedCards, cardPrice, setCard
                     <div className="mt-6">
                         <button
                             onClick={handleCards}
-                            className={`btn btn-primary btn-block rounded-full ${isSelected ? "bg-linear-100 from-[#03700b] to-[#1dce5e] pointer-events-none" : "bg-linear-100 from-[#4F39F6] to-[#9514FA]"}`}>{isSelected ? "Added to cart" : "Buy Now"}</button>
+                            className={`btn text-white btn-block rounded-full 
+                            ${isSelected ? "bg-linear-100 from-[#03700b] to-[#1dce5e] pointer-events-none" : "bg-linear-100 from-[#4F39F6] to-[#9514FA]"}`}
+                            disabled={isSelected}>
+                                {isSelected ? "Added to cart" : "Buy Now"}</button>
                     </div>
                 </div>
             </div>

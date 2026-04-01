@@ -1,13 +1,13 @@
-import React, { use, useState } from 'react';
+import React, { Suspense, use, useState } from 'react';
 import Products from './Product/Products';
 import Carts from './Carts/Carts';
 
 const CardContainer = ({ cardsPromise, selectedCards, setSelectedCards }) => {
     const cards = use(cardsPromise)
     const [selectedType, setSelectedType] = useState("product")
-        
-  const [cardPrice, setCardPrice] = useState(0)
-    
+
+    const [cardPrice, setCardPrice] = useState(0)
+
 
     return (
         <div className='py-30'>
@@ -29,18 +29,22 @@ const CardContainer = ({ cardsPromise, selectedCards, setSelectedCards }) => {
             </div>
             {
                 (selectedType === "product" ?
-                    <Products
-                        cards={cards}
-                        selectedCards={selectedCards}
-                        setSelectedCards={setSelectedCards}
-                        cardPrice={cardPrice}
-                        setCardPrice={setCardPrice} /> :
-                    <Carts
-                        cards={cards}
-                        selectedCards={selectedCards}
-                        setSelectedCards={setSelectedCards}
-                        cardPrice={cardPrice}
-                        setCardPrice={setCardPrice} />)
+                    <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
+                        <Products
+                            cards={cards}
+                            selectedCards={selectedCards}
+                            setSelectedCards={setSelectedCards}
+                            cardPrice={cardPrice}
+                            setCardPrice={setCardPrice} />
+                    </Suspense> :
+                    <Suspense fallback={<span className="loading loading-infinity loading-xl"></span>}>
+                        <Carts
+                            cards={cards}
+                            selectedCards={selectedCards}
+                            setSelectedCards={setSelectedCards}
+                            cardPrice={cardPrice}
+                            setCardPrice={setCardPrice} />
+                    </Suspense>)
             }
         </div>
     );

@@ -21,24 +21,22 @@ function App() {
   return (
     <>
       <Navbar
-        selectedCards={selectedCards}
-        setSelectedCards={setSelectedCards} />
+        selectedCards={selectedCards} />
       <Banner />
       <Stat />
       <Suspense fallback={
         <div className=' p-50 flex items-center justify-center'>
           <span className="loading loading-dots loading-xl">
-          </span>
-        </div>}>
-        <CardContainer 
-        cardsPromise={cardsPromise}
-        selectedCards={selectedCards}
-        setSelectedCards={setSelectedCards} />
+          </span></div>}>
+        <CardContainer
+          cardsPromise={cardsPromise}
+          selectedCards={selectedCards}
+          setSelectedCards={setSelectedCards} />
       </Suspense>
       <Instruction />
       <PricingCard />
       <Footer />
-      <ToastContainer/>
+      <ToastContainer />
     </>
   )
 }

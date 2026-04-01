@@ -6,7 +6,7 @@ const About = () => {
     return (
         <div className='bg-neutral'>
             <div className='container mx-auto pt-15'>
-                <footer className="flex bg-neutral text-neutral-content p-10 justify-around  pb-8 flex-col md:flex-row">
+                <footer className="grid bg-neutral text-neutral-content p-10 pb-8 gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-40">
                     <nav>
                         <h2 className="text-5xl font-bold bg-linear-65 from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent py-4">DigiTools</h2>
                         <p>Premium digital tools for creators, <br /> professionals, and businesses. Work smarter <br /> with our suite of powerful tools.</p>
@@ -34,7 +34,7 @@ const About = () => {
                     </nav>
                     <nav className='flex flex-col gap-2'>
                         <h6 className="font-bold text-lg mb-2">Social Links</h6>
-                        <div className="grid grid-flow-col gap-3">
+                        <div className="flex gap-3">
                             <a className='border rounded-full p-4 bg-white text-black'>
                                 <RiInstagramFill />
                             </a>
